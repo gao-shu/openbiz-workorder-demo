@@ -1,0 +1,23 @@
+openbiz-workorder-demo
+======================
+
+License
+-------
+Original Example code in this repository is released under the MIT License
+(see the LICENSE file). Copyright (c) 2026 gao-shu.
+
+Attribution
+-----------
+This project uses a RuoYi thin shell at runtime and partially references or
+adapts RuoYi-style patterns for the login endpoint shell and configuration /
+i18n layout. It is not a fork of the full RuoYi project, and this repository
+is not claimed to be a derivative of the entire RuoYi codebase.
+
+RuoYi-Vue is licensed under the MIT License.
+Upstream: https://gitee.com/y_project/RuoYi-Vue
+
+Dependencies
+------------
+Runtime dependencies such as RuoYi artifacts (for example ruoyi-framework)
+and OpenBiz artifacts (for example openbiz-service) remain under their own
+respective licenses and copyright notices as distributed with those packages.
