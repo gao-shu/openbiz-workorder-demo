@@ -49,10 +49,11 @@ Mother project: [gao-shu/openbiz](https://github.com/gao-shu/openbiz)
 From the mother repository `open-biz-platform`:
 
 ```bash
-mvn -pl openbiz-service -am install -DskipTests
+mvn -pl openbiz-service,ruoyi-framework -am install -DskipTests
 ```
 
-This installs `com.openbiz:openbiz-service:3.9.2` (and required reactor artifacts) into your **local** Maven repository.  
+This installs `com.openbiz:openbiz-service:3.9.2` and `com.ruoyi:ruoyi-framework:3.9.2` (plus required reactor artifacts) into your **local** Maven repository.  
+The Example needs `ruoyi-framework` for the RuoYi thin shell (login/security/Redis); installing only `openbiz-service` is not enough.  
 **This is not Maven Central.**
 
 ---
