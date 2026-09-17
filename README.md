@@ -4,9 +4,9 @@
 
 ```text
 com.openbiz:openbiz-service:3.9.2  (local Maven repository)
-        ��
+        ↓
 this project (Spring Boot, port 18081)
-        ��
+        ↓
 Real HTTP + Real MySQL
 ```
 
@@ -40,7 +40,7 @@ Mother project: [gao-shu/openbiz](https://github.com/gao-shu/openbiz)
 - **Redis** (required by the RuoYi thin shell)
 - Mother repo available to install artifacts locally
 
-**Time note:** ��5�C10 minutes�� assumes these tools are already installed and MySQL/Redis are running.
+**Time note:** ��5–10 minutes�� assumes these tools are already installed and MySQL/Redis are running.
 
 ---
 
@@ -67,9 +67,9 @@ Default datasource (`src/main/resources/application-druid.yml`):
 
 Minimum SQL from the mother `sql/` folder (import order roughly):
 
-1. RuoYi base (`ry_*.sql`)
-2. OpenBiz SaaS (`openbiz_saas_*.sql`) �� tenants / members
-3. OpenBiz Service (`openbiz_service_*.sql`) �� work order tables
+1. RuoYi base (`ry_20260417.sql`)
+2. OpenBiz SaaS (`openbiz_saas_1_2.sql`) �� tenants / members
+3. OpenBiz Service (`openbiz_service_1.sql`) �� work order tables
 
 You do **not** need every industry IoT/Shop SQL script just to run this WorkOrder demo.
 
@@ -155,9 +155,9 @@ Authorization: Bearer <token>
 Lifecycle (provided by mother `WorkOrderTransitions`, not reimplemented here):
 
 ```text
-CREATED �� ASSIGNED �� ACCEPTED �� COMPLETED
-CREATED | ASSIGNED �� CANCELLED
-COMPLETED �� CANCELLED  �� rejected (ILLEGAL_TRANSITION)
+CREATED → ASSIGNED → ACCEPTED → COMPLETED
+CREATED | ASSIGNED → CANCELLED
+COMPLETED → CANCELLED  → rejected (ILLEGAL_TRANSITION)
 ```
 
 ---
